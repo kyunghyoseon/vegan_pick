@@ -1,0 +1,496 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>veganpick</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/veganpick.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-barun-gothic.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sly/1.6.1/sly.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://kit.fontawesome.com/2597131e32.js" crossorigin="anonymous"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/jquery.bxslider.min.js"></script>
+    <script src="js/jquery.scrollTo.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/animated.js"></script>   
+    <script src="js/veganpick.js"></script>
+    <script src="js/review_pick.js"></script>
+    <script src="js/more.js"></script>
+    <script src="js/footer_menu.js"></script>
+    <script src="js/sly_menu.js"></script>
+</head>
+<body>
+<!--웹 접근성 측면에서 스킵 넣어주기-->
+<div id="skip_main" class="skip"> 
+    <a href="#main">메인 바로가기</a>
+</div>
+
+<header id="nick_header">
+    <nav id="nick_name">
+        <ul>
+            <li>
+                <a href="veganpick.html"><img src="main_img/v_logo.png" alt="로고"></a>
+            </li>
+            <li class="nick_text">
+                <a href="#">환영합니다 닉네임</a> <!--php 인클루드 연결할곳-->
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<div id="search">
+    <input type="text" placeholder="지역, 음식, 레시피를 검색하세요" id="filter-search">
+    <button class="search-icon" onclick="filter()"><img src="main_img/swatch.png" alt="검색 아이콘"></button>
+</div>
+
+<!-- Swiper -->
+<section>
+<div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <a href="#"><img src="main_img/v_img1.jpg" alt="img1"></a>
+            <div class="slide_box">
+                <ul>
+                    <li>“건강하고 든든한 한끼 식사!”</li>
+                    <li>#건강식 #점심식사 #완벽한 한끼 #한식맛집</li>
+                    <button>자세히 보기+</button>
+                </ul>                
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <a href="#"><img src="main_img/v_img2.jpg" alt="img2"></a>
+            <div class="slide_box slide_box1">
+                <ul>
+                    <li>“달콤하게 컨디션 충전 완!”</li>
+                    <li>#건강한 #디저트 #기분전완 #베이커리맛집</li>
+                    <button>자세히 보기+</button>
+                </ul>                
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <a href="#"><img src="main_img/v_img3.jpg" alt="img3"></a>
+            <div class="slide_box slide_box2">
+                <ul>
+                    <li>“올 여름 시원한 빙수 한그릇!”</li>
+                    <li>#비건 #빙수 #여름한정판 #빙수맛집</li>
+                    <button>자세히 보기+</button>
+                </ul>                
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <a href="#"><img src="main_img/v_img4.jpg" alt="img4"></a>
+            <div class="slide_box slide_box3">
+                <ul>
+                    <li>“포만감 가득한 다이어트식!”</li>
+                    <li>#다이어트 #건강식 #건강한 한끼</li>
+                    <button>자세히 보기+</button>
+                </ul>                
+            </div>
+        </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+    <div class="autoplay-progress">
+      <svg viewBox="0 0 48 48">
+        <circle cx="24" cy="24" r="20"></circle>
+      </svg>
+      <span></span>
+    </div>
+</div>
+</section>
+
+<!-- Sly 메뉴 [지역별 맛집 pick] -->
+<section>
+<div class="wrap">
+    <div class="wrap_text">
+        <ul class="t_1">
+            <li>지역별 맛집</li>
+        </ul>
+        <ul class="t_2">
+            <li><a href="#">자세히 보기 +</a></li>
+        </ul>
+    </div>
+
+    <div class="frame" id="basic">
+        <ul class="cf">
+            <li>홍대/신촌</li>
+            <li>합정/망원</li>
+            <li>강남/역삼</li>
+            <li>여의도</li>
+            <li>을지로</li>
+            <li>성수</li>
+            <li>광화문/종로</li>
+            <li>이태원/한남</li>
+            <li>부산</li>
+            <li>제주도</li>
+        </ul>
+    </div>
+</div>
+</section>
+
+<!-- 비건픽 best pick 부분 -->
+<section>
+<div class="slick_box">
+    <div class="wrap_text1">
+        <ul class="t_3">
+            <li>비건픽 best pick</li>
+        </ul>
+        <ul class="t_4">
+            <li><a href="#">자세히 보기 +</a></li>
+        </ul>
+    </div>
+    <div class="slide_wrap">
+        <div>
+            <ul class="s_box"><a href="#">
+                <li><img src="main_img/v_img6.jpg" alt="best_img1"></li>
+                <ul class="s_t_box">
+                    <li>비건이지</li>
+                    <li class="star"><i class="fa-solid fa-star"></i> 4</li>
+                    <li>신길동/베이커리 카페</li>
+                    <li>#비건 #프루테리언 #비건베이커리</li>
+                    <li class="line"></li>
+                </ul>
+            </a></ul>
+        </div>
+        <div>
+            <ul class="s_box"><a href="#">
+                <li><img src="main_img/v_img7.jpg" alt="best_img1"></li>
+                <ul class="s_t_box">
+                    <li>아승지</li>
+                    <li class="star"><i class="fa-solid fa-star"></i> 4.5</li>
+                    <li>영등포/한식&베이커리</li>
+                    <li>#한식 #비건 #페스토 #폴로</li>
+                    <li class="line"></li>
+                </ul>
+            </a></ul>
+        </div>
+        <div>
+            <ul class="s_box"><a href="#">
+                <li><img src="main_img/v_img8.jpg" alt="best_img1"></li>
+                <ul class="s_t_box">
+                    <li>비건마마</li>
+                    <li class="star"><i class="fa-solid fa-star"></i> 4.5</li>
+                    <li>서울대입구/카페&디저트</li>
+                    <li>#비건 #프루테리언 #비건카페</li>
+                    <li class="line"></li>
+                </ul>
+            </a></ul>
+        </div>
+        <div>
+            <ul class="s_box"><a href="#">
+                <li><img src="main_img/v_img9.jpg" alt="best_img1"></li>
+                <ul class="s_t_box">
+                    <li>드렁큰비건</li>
+                    <li class="star"><i class="fa-solid fa-star"></i> 5</li>
+                    <li>홍대입구/양식&술집</li>
+                    <li>#페스코 #폴로 #플렉시테리언 #양식</li>
+                    <li class="line"></li>
+                </ul>
+            </a></ul>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- 레시피 추천 pick 부분 -->
+<section>
+    <!-- more 부분 -->
+<div id="recipe">
+    <div id="recipe_pick_wrap">
+        <div class="wrap_text2">
+            <ul class="t_5">
+                <li>레시피 추천 pick</li>
+            </ul>
+            <ul class="t_6">
+                <li><a href="#">자세히 보기 +</a></li>
+            </ul>
+        </div>
+            <div id="recipe_pick_box">
+                <ul class="cf">
+                    <li>
+                        <div class="item_box"><a href="#">
+                            <img src="main_img/img10.png" alt="recipe_img1">
+                            <span>Young Radish Bibimbap</span>  
+
+                        </a>
+                        </div>          
+                    </li>
+                    <li>
+                        <div class="item_box1"><a href="#">
+                            <img src="main_img/img11.png" alt="recipe_img1">
+                            <span>Tofu Fried</span>
+                        </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item_box2"><a href="#">
+                            <img src="main_img/img12.png" alt="recipe_img1">
+                            <span>Blueberry Scone</span> 
+                        </a>
+                        </div>      
+                    </li> 
+                </ul>
+            </div>
+        <div class="more_btn"><button>More</button></div>
+    </div>
+</div>
+</section>
+
+<!-- 리뷰픽 부분 -->
+<section>
+<div class="review_pick">
+    <div class="wrap_text3">
+        <ul class="t_7">
+            <li>review pick</li>
+        </ul>
+        <ul class="t_8">
+            <li><a href="#">자세히 보기 +</a></li>
+        </ul>
+    </div>
+
+    <div class="slide_wrap1">
+        <div>
+            <ul class="r_box">
+                <li><a href="#"><img src="main_img/img13.png" alt="review_img1" width="100%"></a></li>
+                <div class="nick_t">
+                    <ul>
+                        <li>
+                            <img src="main_img/nick_img1.png" alt="nick_img">
+                        </li>
+                        <li>
+                            닉네임<span>2023 07 25</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nick_t1">
+                    <ul>
+                        <h2>분위기 좋은 양식 비건식당</h2>
+                        <li>양식부터 카페, bar 까지!<br>
+                            오래 머물며, 분위기 좋은 맛집!
+                        </li>
+                    </ul>
+                </div>
+            </ul>
+            <ul class="r_box1">
+                 <div class="nick_t2">
+                    <ul>
+                        <li>비건 앤 비욘드</li>
+                        <li class="star1"><i class="fa-solid fa-star"></i> 5</li>
+                        <li>홍대입구/양식&술집</li>
+                        <li>#페스코 #폴로 #플렉시테리언 #양식</li>
+                    </ul>
+                 </div>
+            </ul>
+        </div>
+        <div>
+            <ul class="r_box">
+                <li><a href="#"><img src="main_img/img14.png" alt="review_img1" width="100%"></a></li>
+                <div class="nick_t">
+                    <ul>
+                        <li>
+                            <img src="main_img/nick_img2.png" alt="nick_img">
+                        </li>
+                        <li>
+                            닉네임<span>2023 05 19</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nick_t1">
+                    <ul>
+                        <h2>100% 식물성 재료, 건강한 집</h2>
+                        <li>비건이지만 속세의 맛이 납니다<br>
+                            한달에 한번은 꼭 가는 맛집!
+                        </li>
+                    </ul>
+                </div>
+            </ul>
+            <ul class="r_box1">
+                 <div class="nick_t2">
+                    <ul>
+                        <li>별란비건</li>
+                        <li class="star1"><i class="fa-solid fa-star"></i> 3.8</li>
+                        <li>파주/분식&퓨전</li>
+                        <li>#분식 #양식 #한식 #퓨전맛집</li>
+                    </ul>
+                 </div>
+            </ul>
+        </div>
+        <div>
+            <ul class="r_box">
+                <li><a href="#"><img src="main_img/img15.png" alt="review_img1" width="100%"></a></li>
+                <div class="nick_t">
+                    <ul>
+                        <li>
+                            <img src="main_img/nick_img1.png" alt="nick_img">
+                        </li>
+                        <li>
+                            닉네임<span>2023 09 23</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nick_t1">
+                    <ul>
+                        <h2>건강하게 맛있는 젤라또 천국</h2>
+                        <li>먹어도 먹어도 안질려서 2개 순삭<br>
+                            홍대 갈때마다 젤라떼리아 갑니다~
+                        </li>
+                    </ul>
+                </div>
+            </ul>
+            <ul class="r_box1">
+                 <div class="nick_t2">
+                    <ul>
+                        <li>젤라떼리아 에따</li>
+                        <li class="star1"><i class="fa-solid fa-star"></i> 4.8</li>
+                        <li>홍대입구/젤라또&디저트</li>
+                        <li>#비건 #젤라또 #이탈리안정통</li>
+                    </ul>
+                 </div>
+            </ul>
+        </div>
+        <div>
+            <ul class="r_box">
+                <li><a href="#"><img src="main_img/img16.png" alt="review_img1" width="100%"></a></li>
+                <div class="nick_t">
+                    <ul>
+                        <li>
+                            <img src="main_img/nick_img3.png" alt="nick_img">
+                        </li>
+                        <li>
+                            닉네임<span>2023 08 01</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nick_t1">
+                    <ul>
+                        <h2>건강한 빵! 비건 베이커리</h2>
+                        <li>유기농 100% 재료로 만드는 곳<br>
+                            건강, 다이어트 걱정no!
+                        </li>
+                    </ul>
+                </div>
+            </ul>
+            <ul class="r_box1">
+                 <div class="nick_t2">
+                    <ul>
+                        <li>비건 베이커리 도야팡</li>
+                        <li class="star1"><i class="fa-solid fa-star"></i> 5</li>
+                        <li>의정부/베이커리</li>
+                        <li>#비건 #베이커리 #건강한빵</li>
+                    </ul>
+                 </div>
+            </ul>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- 하단 메뉴바 -->
+<section>
+    <div class="foorter_menu">
+        <ul>
+            <li><a href="veganpick.html"><i class="fa-solid fa-store"></i></a></li>
+            <li><a href="search.html"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+            <li>
+                <div id="menu-container"> 
+                    <div id="menu-wrapper">
+                        <div id="hamburger-menu">
+                            <div class="s_1">
+                                <span></span>  
+                                <span></span> 
+                                <span></span> 
+                            </div>
+                        </div> 
+                    </div>
+                    <ul class="menu-list">
+                        <h1 id="top_m">카테고리</h1>                      
+                        <li id="nav1" class="accordion-toggle">
+                            <a class="menu-link" href="#">레시피</a>
+                        </li>
+                        <ul class="menu-submenu accordion-content">
+                            <li><a href="#">추천메뉴</a></li>
+                        </ul>
+                        <li id="nav2" class="accordion-toggle">
+                            <a class="menu-link" href="#">비건핏 맛집</a>
+                        </li>
+                        <ul class="menu-submenu accordion-content">
+                            <li><a href="#">한식</a></li>
+                            <li><a href="#">중식</a></li>
+                            <li><a href="#">일식</a></li>
+                            <li><a href="#">양식</a></li>
+                        </ul>
+                        <li id="nav3" class="accordion-toggle1">
+                            <a class="menu-link" href="#">카페 / 베이커리</a>
+                        </li>
+                        <li id="nav4" class="accordion-toggle1">
+                            <a class="menu-link" href="#">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="recipe.html"><i class="fa-solid fa-book-open"></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-user-large"></i></a></li>
+        </ul>
+
+    </div>
+
+</section>
+
+<footer>
+    <ul class="sns">
+        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+    </ul>
+    <ul class="mail">
+        <li><a href="#">vegan pick@naver.com</a></li>
+    </ul>
+
+</footer>
+
+
+
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+  const progressCircle = document.querySelector(".autoplay-progress svg");
+  const progressContent = document.querySelector(".autoplay-progress span");
+  var swiper = new Swiper(".mySwiper", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+    on: {
+      autoplayTimeLeft(s, time, progress) {
+        progressCircle.style.setProperty("--progress", 1 - progress);
+        progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+      }
+    }
+  });
+</script>
+
+    
+</body>
+</html>

@@ -1,0 +1,568 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>veganpick</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/recipe.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-barun-gothic.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://kit.fontawesome.com/2597131e32.js" crossorigin="anonymous"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/jquery.bxslider.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/animated.js"></script>   
+    <script src="js/recipe.js"></script>
+</head>
+<body>
+<!--웹 접근성 측면에서 스킵 넣어주기-->
+<div id="skip_main" class="skip"> 
+    <a href="#main">메인 바로가기</a>
+</div>
+
+<header>
+    <h1 class="r_top">
+        건강한 한끼의 행복을 주는<br>
+        비건 pick 레시피!
+    </h1>
+    <a href="veganpick.html"><i class="fa-solid fa-arrow-left"></i></a>
+</header>
+
+<!-- recipe swiper -->
+<section class="recipe_slide">
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <a href="#"><img src="recipe_img/img1.png" alt="과카몰리 이미지"></a>
+                <ul class="recipe_t">
+                    <li>과카몰리</li>
+                    <li>초급&nbsp <i class="fa-solid fa-star"></i> &nbsp 
+                        40분&nbsp <i class="fa-regular fa-clock"></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="swiper-slide">
+                <a href="#"><img src="recipe_img/img2.png" alt="수박 샐러드 이미지"></a>
+                <ul class="recipe_t">
+                    <li>수박 샐러드</li>
+                    <li>초급&nbsp <i class="fa-solid fa-star"></i> &nbsp 
+                        20분&nbsp <i class="fa-regular fa-clock"></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="swiper-slide">
+                <a href="#"><img src="recipe_img/img3.png" alt="베이글 샌드위치 이미지"></a>
+                <ul class="recipe_t">
+                    <li>베이글 샌드위치</li>
+                    <li>초급&nbsp <i class="fa-solid fa-star"></i> &nbsp 
+                        20분&nbsp <i class="fa-regular fa-clock"></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="swiper-slide">
+                <a href="#"><img src="recipe_img/img4.png" alt="비건타코 이미지"></a>
+                <ul class="recipe_t">
+                    <li>비건타코</li>
+                    <li>중급&nbsp <i class="fa-solid fa-star"></i> &nbsp 
+                        30분&nbsp <i class="fa-regular fa-clock"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 추천 레시피 탭 부분 -->
+<section>
+    <div id="tab_contain">
+        <h3>추천 레시피</h3>
+        <ul class="tab">
+            <li><a href="#tab1" class="selected">한식</a></li>
+            <li><a href="#tab2">양식</a></li>
+            <li><a href="#tab3">중식</a></li>
+            <li><a href="#tab4">일식</a></li>
+            <li><a href="#tab5">밑반찬</a></li>
+            <li><a href="#tab6">간식</a></li>
+            <li><a href="#tab7">분식</a></li>
+            <li><a href="#tab8">다이어트</a></li>
+        </ul>
+    
+        <ul class="panel">
+            <li id="tab1">
+                <ul class="tab_menu">
+                    <li>
+                        <a href="#">
+                            <div class="wrap">
+                                <ul>
+                                    <li><a href="#"><img src="recipe_img/recipe_img1.png" alt="비빔밥"></a></li>
+                                    <li style="font-size: 14px;">비빔밥</li>
+                                    <li>초급&nbsp <i class="fa-solid fa-star"></i> &nbsp 
+                                        15분&nbsp <i class="fa-regular fa-clock"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="wrap">
+                                <ul>
+                                    <li><a href="#"><img src="recipe_img/recipe_img2.png" alt="동그랑땡"></a></li>
+                                    <li style="font-size: 14px;">동그랑땡</li>
+                                    <li>중급&nbsp <i class="fa-solid fa-star"></i> &nbsp 
+                                        30분&nbsp <i class="fa-regular fa-clock"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="wrap">
+                                <ul>
+                                    <li><a href="#"><img src="recipe_img/recipe_img3.png" alt="묵밥"></a></li>
+                                    <li style="font-size: 14px;">묵밥</li>
+                                    <li>초급&nbsp <i class="fa-solid fa-star"></i> &nbsp 
+                                        20분&nbsp <i class="fa-regular fa-clock"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="wrap">
+                                <ul>
+                                    <li><a href="#"><img src="recipe_img/recipe_img4.png" alt="비건 허브 카레"></a></li>
+                                    <li style="font-size: 14px;">비건 허브 카레</li>
+                                    <li>중급&nbsp <i class="fa-solid fa-star"></i> &nbsp 
+                                        30분&nbsp <i class="fa-regular fa-clock"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </li>    <!-- #tab1 li 끝-->
+            <li id="tab2">
+                <ul class="tab_menu">
+                    <li>
+                        <a href="#">
+                            <div class="wrap">
+                                <ul>
+                                    <li><a href="#"><img src="recipe_img/recipe_img5.png" alt="비빔밥"></a></li>
+                                    <li style="font-size: 14px;">비빔밥</li>
+                                    <li>초급&nbsp <i class="fa-solid fa-star"></i> &nbsp 
+                                        15분&nbsp <i class="fa-regular fa-clock"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="wrap">
+                                <ul>
+                                    <li><a href="#"><img src="recipe_img/recipe_img6.png" alt="동그랑땡"></a></li>
+                                    <li style="font-size: 14px;">동그랑땡</li>
+                                    <li>중급&nbsp <i class="fa-solid fa-star"></i> &nbsp 
+                                        30분&nbsp <i class="fa-regular fa-clock"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="wrap">
+                                <ul>
+                                    <li><a href="#"><img src="recipe_img/recipe_img7.png" alt="묵밥"></a></li>
+                                    <li style="font-size: 14px;">묵밥</li>
+                                    <li>초급&nbsp <i class="fa-solid fa-star"></i> &nbsp 
+                                        20분&nbsp <i class="fa-regular fa-clock"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="wrap">
+                                <ul>
+                                    <li><a href="#"><img src="recipe_img/recipe_img8.png" alt="비건 허브 카레"></a></li>
+                                    <li style="font-size: 14px;">비건 허브 카레</li>
+                                    <li>중급&nbsp <i class="fa-solid fa-star"></i> &nbsp 
+                                        30분&nbsp <i class="fa-regular fa-clock"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </li>    <!-- #tab2 li 끝-->
+            <li id="tab3">
+                <ul class="tab_menu">
+                    <li>
+                        <a href="#">
+                            <div class="wrap">
+                                <ul>
+                                    <li><a href="#"><img src="recipe_img/recipe_img9.png" alt="비빔밥"></a></li>
+                                    <li style="font-size: 14px;">비빔밥</li>
+                                    <li>초급&nbsp <i class="fa-solid fa-star"></i> &nbsp 
+                                        15분&nbsp <i class="fa-regular fa-clock"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="wrap">
+                                <ul>
+                                    <li><a href="#"><img src="recipe_img/recipe_img10.png" alt="동그랑땡"></a></li>
+                                    <li style="font-size: 14px;">동그랑땡</li>
+                                    <li>중급&nbsp <i class="fa-solid fa-star"></i> &nbsp 
+                                        30분&nbsp <i class="fa-regular fa-clock"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="wrap">
+                                <ul>
+                                    <li><a href="#"><img src="recipe_img/recipe_img11.png" alt="묵밥"></a></li>
+                                    <li style="font-size: 14px;">묵밥</li>
+                                    <li>초급&nbsp <i class="fa-solid fa-star"></i> &nbsp 
+                                        20분&nbsp <i class="fa-regular fa-clock"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="wrap">
+                                <ul>
+                                    <li><a href="#"><img src="recipe_img/recipe_img12.png" alt="비건 허브 카레"></a></li>
+                                    <li style="font-size: 14px;">비건 허브 카레</li>
+                                    <li>중급&nbsp <i class="fa-solid fa-star"></i> &nbsp 
+                                        30분&nbsp <i class="fa-regular fa-clock"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </li>    <!-- #tab3 li 끝-->
+            <li id="tab4">
+                <ul class="tab_menu">
+                    <li>
+                        <a href="#">
+                            <div class="wrap">
+                                <ul>
+                                    <li><a href="#"><img src="recipe_img/recipe_img13.png" alt="비빔밥"></a></li>
+                                    <li style="font-size: 14px;">비빔밥</li>
+                                    <li>초급&nbsp <i class="fa-solid fa-star"></i> &nbsp 
+                                        15분&nbsp <i class="fa-regular fa-clock"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="wrap">
+                                <ul>
+                                    <li><a href="#"><img src="recipe_img/recipe_img14.png" alt="동그랑땡"></a></li>
+                                    <li style="font-size: 14px;">동그랑땡</li>
+                                    <li>중급&nbsp <i class="fa-solid fa-star"></i> &nbsp 
+                                        30분&nbsp <i class="fa-regular fa-clock"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="wrap">
+                                <ul>
+                                    <li><a href="#"><img src="recipe_img/recipe_img15.png" alt="묵밥"></a></li>
+                                    <li style="font-size: 14px;">묵밥</li>
+                                    <li>초급&nbsp <i class="fa-solid fa-star"></i> &nbsp 
+                                        20분&nbsp <i class="fa-regular fa-clock"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="wrap">
+                                <ul>
+                                    <li><a href="#"><img src="recipe_img/recipe_img16.png" alt="비건 허브 카레"></a></li>
+                                    <li style="font-size: 14px;">비건 허브 카레</li>
+                                    <li>중급&nbsp <i class="fa-solid fa-star"></i> &nbsp 
+                                        30분&nbsp <i class="fa-regular fa-clock"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </li>    <!-- #tab4 li 끝-->
+            <li id="tab5">
+                <ul class="tab_menu">
+                    <li>
+                        <a href="#">
+                            <div class="wrap">
+                                <ul>
+                                    <li><a href="#"><img src="recipe_img/recipe_img17.png" alt="비빔밥"></a></li>
+                                    <li style="font-size: 14px;">비빔밥</li>
+                                    <li>초급&nbsp <i class="fa-solid fa-star"></i> &nbsp 
+                                        15분&nbsp <i class="fa-regular fa-clock"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="wrap">
+                                <ul>
+                                    <li><a href="#"><img src="recipe_img/recipe_img18.png" alt="동그랑땡"></a></li>
+                                    <li style="font-size: 14px;">동그랑땡</li>
+                                    <li>중급&nbsp <i class="fa-solid fa-star"></i> &nbsp 
+                                        30분&nbsp <i class="fa-regular fa-clock"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="wrap">
+                                <ul>
+                                    <li><a href="#"><img src="recipe_img/recipe_img19.png" alt="묵밥"></a></li>
+                                    <li style="font-size: 14px;">묵밥</li>
+                                    <li>초급&nbsp <i class="fa-solid fa-star"></i> &nbsp 
+                                        20분&nbsp <i class="fa-regular fa-clock"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="wrap">
+                                <ul>
+                                    <li><a href="#"><img src="recipe_img/recipe_img20.png" alt="비건 허브 카레"></a></li>
+                                    <li style="font-size: 14px;">비건 허브 카레</li>
+                                    <li>중급&nbsp <i class="fa-solid fa-star"></i> &nbsp 
+                                        30분&nbsp <i class="fa-regular fa-clock"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </li>    <!-- #tab5 li 끝-->
+            <li id="tab6">
+                <ul class="tab_menu">
+                    <li>
+                        <a href="#">
+                            <div class="wrap">
+                                <ul>
+                                    <li><a href="#"><img src="recipe_img/recipe_img21.png" alt="비빔밥"></a></li>
+                                    <li style="font-size: 14px;">비빔밥</li>
+                                    <li>초급&nbsp <i class="fa-solid fa-star"></i> &nbsp 
+                                        15분&nbsp <i class="fa-regular fa-clock"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="wrap">
+                                <ul>
+                                    <li><a href="#"><img src="recipe_img/recipe_img22.png" alt="동그랑땡"></a></li>
+                                    <li style="font-size: 14px;">동그랑땡</li>
+                                    <li>중급&nbsp <i class="fa-solid fa-star"></i> &nbsp 
+                                        30분&nbsp <i class="fa-regular fa-clock"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="wrap">
+                                <ul>
+                                    <li><a href="#"><img src="recipe_img/recipe_img23.png" alt="묵밥"></a></li>
+                                    <li style="font-size: 14px;">묵밥</li>
+                                    <li>초급&nbsp <i class="fa-solid fa-star"></i> &nbsp 
+                                        20분&nbsp <i class="fa-regular fa-clock"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="wrap">
+                                <ul>
+                                    <li><a href="#"><img src="recipe_img/recipe_img24.png" alt="비건 허브 카레"></a></li>
+                                    <li style="font-size: 14px;">비건 허브 카레</li>
+                                    <li>중급&nbsp <i class="fa-solid fa-star"></i> &nbsp 
+                                        30분&nbsp <i class="fa-regular fa-clock"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </li>    <!-- #tab6 li 끝-->
+            <li id="tab7">
+                <ul class="tab_menu">
+                    <li>
+                        <a href="#">
+                            <div class="wrap">
+                                <ul>
+                                    <li><a href="#"><img src="recipe_img/recipe_img25.png" alt="비빔밥"></a></li>
+                                    <li style="font-size: 14px;">비빔밥</li>
+                                    <li>초급&nbsp <i class="fa-solid fa-star"></i> &nbsp 
+                                        15분&nbsp <i class="fa-regular fa-clock"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="wrap">
+                                <ul>
+                                    <li><a href="#"><img src="recipe_img/recipe_img26.png" alt="동그랑땡"></a></li>
+                                    <li style="font-size: 14px;">동그랑땡</li>
+                                    <li>중급&nbsp <i class="fa-solid fa-star"></i> &nbsp 
+                                        30분&nbsp <i class="fa-regular fa-clock"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="wrap">
+                                <ul>
+                                    <li><a href="#"><img src="recipe_img/recipe_img27.png" alt="묵밥"></a></li>
+                                    <li style="font-size: 14px;">묵밥</li>
+                                    <li>초급&nbsp <i class="fa-solid fa-star"></i> &nbsp 
+                                        20분&nbsp <i class="fa-regular fa-clock"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="wrap">
+                                <ul>
+                                    <li><a href="#"><img src="recipe_img/recipe_img28.png" alt="비건 허브 카레"></a></li>
+                                    <li style="font-size: 14px;">비건 허브 카레</li>
+                                    <li>중급&nbsp <i class="fa-solid fa-star"></i> &nbsp 
+                                        30분&nbsp <i class="fa-regular fa-clock"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </li>    <!-- #tab7 li 끝-->
+            <li id="tab8">
+                <ul class="tab_menu">
+                    <li>
+                        <a href="#">
+                            <div class="wrap">
+                                <ul>
+                                    <li><a href="#"><img src="recipe_img/recipe_img29.png" alt="비빔밥"></a></li>
+                                    <li style="font-size: 14px;">비빔밥</li>
+                                    <li>초급&nbsp <i class="fa-solid fa-star"></i> &nbsp 
+                                        15분&nbsp <i class="fa-regular fa-clock"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="wrap">
+                                <ul>
+                                    <li><a href="#"><img src="recipe_img/recipe_img30.png" alt="동그랑땡"></a></li>
+                                    <li style="font-size: 14px;">동그랑땡</li>
+                                    <li>중급&nbsp <i class="fa-solid fa-star"></i> &nbsp 
+                                        30분&nbsp <i class="fa-regular fa-clock"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="wrap">
+                                <ul>
+                                    <li><a href="#"><img src="recipe_img/recipe_img31.png" alt="묵밥"></a></li>
+                                    <li style="font-size: 14px;">묵밥</li>
+                                    <li>초급&nbsp <i class="fa-solid fa-star"></i> &nbsp 
+                                        20분&nbsp <i class="fa-regular fa-clock"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="wrap">
+                                <ul>
+                                    <li><a href="#"><img src="recipe_img/recipe_img32.png" alt="비건 허브 카레"></a></li>
+                                    <li style="font-size: 14px;">비건 허브 카레</li>
+                                    <li>중급&nbsp <i class="fa-solid fa-star"></i> &nbsp 
+                                        30분&nbsp <i class="fa-regular fa-clock"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </li>    <!-- #tab8 li end-->
+        </ul>    <!-- .panel ul end-->
+    </div>    <!--tab_contain end-->
+</section>
+
+
+
+
+
+
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        effect: "cards",
+        grabCursor: true,
+    });
+</script>
+
+</body>
+</html>
